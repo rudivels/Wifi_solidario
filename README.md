@@ -110,14 +110,21 @@ Exigências.
 * Opensource
 * Alimentação independente com energia solar 
 
-Primeiro passo 
-Achar um hardware para implementar o link direcional. 
+O primeiro passo foi achar um hardware para implementar o link direcional. A opção encontrado foi este adaptador USB para WiFi que tem uma antenna externa destacável. O manual do equipamento garante que o equipamento tem uma alcance de funcionamento de até 100 metros em ambiente interno e até 300 metros em ambiente externo com a sua antenna de 7dBi. 
+Para implementar o link vamos usar nos dois extremos um Raspberry Zero, que do lado de roteador recebe o sinal por meio do WiFi onboard e implementa uma ponte TCP-IP usando o adaptador USB-WiFi com IP fixo. 
 
-O hardware para implementar a solução:
+Do outro lado do link, teremos o mesmo hardware, recebendo o sinal no link IP pelo adaptador USB WiFi com a diferença que o Raspberry Zero funcionará como ponto de acesso a rede internet, por meio do WiFi onboard.
+
 
 ![](figuras/usb_wifi_antenna.png)
 
 ![](figuras/raspberry_zero.jpg)
+
+O hardware será alimentado por sistema prório de alimentação com energia solar e bateria, permitindo operação independente da instalação elétrica das duas casas.
+
+# Alimentação solar
+## Demanda de energia
+
 
 # Bibliografia
 
