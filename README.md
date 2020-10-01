@@ -98,12 +98,30 @@ Essa solução pode ser representado pelas seguintes camadas Rede, Enlace e Fís
 | Enlace | IEEE 802      | IEEE 802 | IEEE 802  | IEEE 802 | IEEE 802 |
 | Física | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz| Radio 2.4 GHz |
 
+
+# Implementação
+
+Exigências.
+
+* Plug and play ou fácil configuração
+* Solução replicável e escalável
+* Custo acessível
+* Tecnologia aberta
+* Opensource
+* Alimentação independente com energia solar 
+
+Primeiro passo 
+Achar um hardware para implementar o link direcional. 
+
 O hardware para implementar a solução:
 
+![](figuras/usb_wifi_antenna.png)
 
+![](figuras/raspberry_zero.jpg)
 
 # Bibliografia
 
 [1] Els RH van, Balduino LF, Henriques AMD, Campos C de O. Hydrokinetic turbine for isolated villages. PCH Notícias SHP News 2003;19:24–5.
+
 [2] Pietrosemoli E. Setting Long Distance WiFi Records : Proofing Solutions for Rural Connectivity. J Community Informatics 2008;4:1–10.
 
