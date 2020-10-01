@@ -90,11 +90,11 @@ Há de diversos relatos do uso dessa tecnologia em aplicações comunitárias.
 
 Essa solução pode ser representado pelas seguintes camadas Rede, Enlace e Física.
 
-| Camada    | Roteador | Link direcional A | Link direcional B | Ponto de acesso | Celular | 
+| Camada    | Roteador | Link direcional A | Link direcional B | Ponto de acesso | Celular |
 |:---------:|:--------:|:---------:|:---------:|:--------:|:------:|:-----:|
 | Aplicação | Serviços internet | | | | Serviços internet |
 | Rede      | TCP/IP (DHCP)     |TCP IP fixo |TCP IP fixo | TCP IP DHCP | TCP IP dinâmico| 
-| Enlace | IEEE 802      | IEEE 802 |IEEE 802  | IEEE 802 | IEEE 802 |
+| Enlace | IEEE 802      | IEEE 802 | IEEE 802  | IEEE 802 | IEEE 802 |
 | Física | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz| Radio 2.4 GHz |
 
 O hardware para implementar a solução:
