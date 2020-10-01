@@ -97,6 +97,7 @@ Essa solução pode ser representado pelas seguintes camadas Rede, Enlace e Fís
 | Enlace | IEEE 802      | IEEE 802 |IEEE 802  | IEEE 802 | IEEE 802 |
 | Física | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz| Radio 2.4 GHz |
 
+O hardware para implementar a solução:
 
 
 
