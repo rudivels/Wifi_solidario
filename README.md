@@ -8,21 +8,36 @@ Implementação de uma rede wifi num sítio na zona rural.
 Minhas pesquisas e ações de extensão na área de geração descentralizada de energia elétrica para comunidades distantes das redes de distribuição sempre me levaram a encarar novos desafios tecnológicos.
 As grandes demandas dessas comunidades são água, iluminação, comunicação e geração de renda, e a energia elétrica é um serviço que pode ajudar a atender essas quatro principais demandas. 
 
+Recentemente surgiu uma demanda de atender uma demanda de comunicação num sítio no interior do estado da Bahia.
+
 Neste sítio em particular, a gente tinha implementado uma turbina hidrocinética na década de 1990 e este empreendimento deu origim a diversos projetos de pesquisa e extensão e de certa forma nos deu a possibilidade de testar vários estratégias de tecnologias sociais ou solidários [1]. 
 
 O desafio neste caso, foi a necessidade extender uma rede de wifi de uma casa para outra casa numa distância de aproximadamente 800 metros. Entre as duas casas tem uma área cerrado nativo preservada ao longo do Rio Corrente e uma estrada de acesso.
 
-Aparentemente um problema simples de resolver, nos colocou um interessante desafio tecnológico. Como estender um rede wifi para cobrir uma area rural, com o uso de tecnologias acessíveis no mercado, custo baixo, levando em consideração as limitações de disponibilidade de energia elétrica. 
+A imagem de satelite mostra a sitação 
+![](figuras/imagem_sitacao.jpeg)
+
+Este aparentemente simples problema simples de resolver, nos colocou um interessante desafio tecnológico. Como estender um rede wifi para cobrir uma area rural, com o uso de tecnologias acessíveis no mercado, sem necessidade especoíficos de radio enlaces, levando em consideração as limitações de disponibilidade de energia elétrica. 
 
 Pois bem. Feito o desafio vamos buscar uma solução.
 
 # Situação atual
-Sem cobertura de celular. Mostrar link para mapa de cobertura da aneel, mostrando que o ponto de acesso com cobertura de celular está a 100 km. 
-A única opção de serviço é telefone rural ou internet via satélite. Essa opção de internet via satélite está ficando um pouco mais acessível nos ultimos tempos a custos acessíveis, tornando o seu uso acessível. A grande vantagem disso é que permite o uso de whatsapp no smartphones, substituindo o uso de telefone convencional. 
+A região se encontre sem cobertura de sinal de telefonia celular. O acesso mais proximo de sinal de celular fica a mais de 100 km na cidade de Posto Rosário na fronteira com Goias e Bahia.  
+A única opção de serviço de comunicação é por meio do serviço de telefone rural ou internet via satélite. A opção de internet via satélite está ficando um pouco mais acessível nos ultimos tempos a custos compatíveis com o que se pagaria por acesso a internet nos centros urbanos. A grande vantagem disso é que permite o uso de whatsapp no smartphones, substituindo o uso de telefone convencional. 
+
+Entretanto, o plano básico para aplicações residencias permite um trafego de baixo velocidade, suficiente para mandar mensagens de texto ou mensagens de voz, durante o dia, e a noite (de madrugada) a velocidade fica maior permitindo acesso melhor aos serviços de internet.
 
 A situação atual é uma assinatura de internet via satélite, uma antenna parabólica acoplada a um modem com uma saida Ethernet 10BaseT ligando um roteador comercial de Wifi disponibilizando acesso a rede internet.
 
-Diagrama de bloco 
+A primeira foto mostra a antenna parabólica instalada na casa e a segunda mostra o modem com roteador wifi.
+
+![](figuras/antena_parabolica.png) 
+
+![](figuras/modem_roteador.png)
+
+A antena parabolica e o modem são do provedor de internet, enquanto o roteador wifi é um produto comercial facilmente encontrado em qualquer loja de informática. Assim qualquer aparelho celular pode-se ligar ao roteador wifi.
+
+O diagrama de bloco mostra a configuração.
 Satelite - modem - roteador - smartfone.
  
 ![](figuras/configuracao_atual.png)
@@ -90,13 +105,8 @@ Há de diversos relatos do uso dessa tecnologia em aplicações comunitárias.
 
 Essa solução pode ser representado pelas seguintes camadas Rede, Enlace e Física.
 
+![](figuras/camadas_protocolos.png)
 
-| Camada    | Roteador | Link direcional A | Link direcional B | Ponto de acesso | Celular |
-|:---------:|:--------:|:---------:|:---------:|:--------:|:------:|:-----:|
-| Aplicação | Serviços internet | | | | Serviços internet |
-| Rede      | TCP/IP (DHCP)     |TCP IP fixo |TCP IP fixo | TCP IP DHCP | TCP IP dinâmico| 
-| Enlace | IEEE 802      | IEEE 802 | IEEE 802  | IEEE 802 | IEEE 802 |
-| Física | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz| Radio 2.4 GHz |
 
 
 # Implementação
