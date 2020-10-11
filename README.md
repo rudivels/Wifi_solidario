@@ -47,8 +47,8 @@ A ligação entre o roteador pode ser representado usando o modelo de Camadas OS
 | Camada    | Roteador          | Celular | 
 |:---------:|:-----------------:|:-------:|
 | Aplicação | Serviços internet | Serviços internet (Whatsapp)|
-| Rede      | TCP/IP (DHCP)     | TCP IP dinâmico| 
-| Enlace    | IEEE 802          | IEEE 802       |
+| Rede      | protocolo TCP/IP (DHCP)| protocolo TCP IP dinâmico| 
+| Enlace    | protocolo IEEE 802     | protocolo IEEE 802       |
 | Física    | Radio 2.4 Ghz     | Radio 2.4 GHz  |  
 
 Essa configuração permite que qualquer aparelho celular numa distância de até 30 metros do roteador pode ter acesso a sinal de wifi, dependendo dos obstáculos entre o roteador e celular.
@@ -99,7 +99,7 @@ Há algumas opções antigos de cabo de rede coaxial que permite maiores alcance
 | Aplicação | Serviços internet | Serviços internet (Whatsapp)|
 | Rede      | TCP/IP (DHCP)     | TCP IP dinâmico| 
 | Enlace    | IEEE 802          | IEEE 802       |
-| Física    | Cano de redeR     | Cabo de rede   |  
+| Física    | Cabo de redeR     | Cabo de rede   |  
 
 A grande disvantagem é o custo da instalação, pois o custo de cabo de rede é um torno de R\$0,70 o metro, além do custo do trabalho de enterrar o cabo.
 
