@@ -37,7 +37,7 @@ A primeira foto mostra a antenna parabólica instalada na casa e a segunda mostr
 
 A antena parabolica e o modem são do provedor de internet, enquanto o roteador wifi é um produto comercial facilmente encontrado em qualquer loja de informática. Assim qualquer aparelho celular pode-se ligar ao roteador wifi.
 
-O diagrama de bloco mostra a configuração.
+O diagrama de bloco mostra a atual configuração:
 Satelite - modem - roteador - smartfone.
  
 ![](figuras/configuracao_atual.png)
@@ -51,9 +51,43 @@ A ligação entre o roteador pode ser representado usando o modelo de Camadas OS
 | Enlace    | IEEE 802          | IEEE 802       |
 | Física    | Radio 2.4 Ghz     | Radio 2.4 GHz  |  
 
+Essa configuração permite que qualquer aparelho celular numa distância de até 30 metros do roteador pode ter acesso a sinal de wifi, dependendo dos obstáculos entre o roteador e celular.
+
+O desafio é de expandir o sinal do wifi até a outra casa no sítio que fica a uma distância de 800 metros.
+
+## Wifi solidário
+Encontrando uma solução tecnológica para este desafio, abre se a oportunidade de implementar redes de wifi que possam atender comunidades rurais e montar rede de comunicação com equipamentos com custos bastante acessíveis. 
+
+De certa forma, essa abordagem resgata o principio original da internet, onde se pensou uma estrutura de comunicação de redes entre computadores interligados por meio de enlaces de comunicação, onde cada computador cuidadava de um elo da comunicação e permitia a passagem de dados para um outro elo da rede. 
+
+Ou seja, a grande inovação da internet era que qualquer computador (com sua própria rede local ou intranet) ao se ligar a internet, permitia que todos os usários desse computador (ou rede local) tivessem acesso a internet sem ter que pedir licença a ninguem e assim sucessivamente.  
+
+A internet surgiu assim, e popularizou por isso, fazendo a interconexões de redes sem ter um dono que centraliza e coordena todas a comunicação da rede.
+
+O avanços tecnológicos dos equipamentos de comunicação baseado na tecnologia internet, permitiram o aparecimento de diversos hardware especializados como modens, hubs, repetidores, e roteadores, além de softwares na forma de servidores de rede, servidores de email e mensagens além do servidores de conteúdo com browsers para computadores e celulares. 
+
+Todos estes produtos são disponíveis no mercado, mas há a necessidade de adapta-lo para poder ser usado em ambientes rurais que tem especificidades próprias, especialmente sistemas de alimentação com fontes alternativos de energia elétrica.
+
+Há alguns exemplos de redes de [wifi comunitários](https://en.wikipedia.org/wiki/Wireless_community_network) que basicamente foram intalados em áreas urbanos.
+
+Essa tecnologia tem um potencial para atender as zonas rurais interligando comunidades tradicionais.
+
+### Celfone hunter
+Há alguns anos fui numa comunidade indígena perto da fronteira do Suriname com Brasil e nessa vila tinha uma torre de telefone celular operado pela empresa estatal de comunicação de Suriname. Essa torre era alimentado por energia solar, e a vila tem em torno de 1000 habitantes. 
+
+A tarifação para fazer qualquer ligação via celular era a mesma que a tarifa usada no resto do país, entretanto, para ligações locais dentro da vila de aparelho para aparelho sem ter que passar pelo canal de comunicação da operadora, eram gratuitos. 
+Isso permitia uma intensa comunicação no dia-a-dia na comunidade cobrindo um raio de alguns quilometros, dependendo da visibilidade do sinal de rádio.
+
+Tem um exemplo de um caçador, que encontrou e abateu algumas Antas na floresta perto da vila. 
+Normalmente ele teria que abandonar a caça abatida e procurar ajuda na vila para levar a caça e nisso podia correr o perigo de perder uma parte do seu trabalho.
+
+Bastou ele achar um lugar com boa recepção de sinal na floresta para ele pedir chamar os parentes para ajudar para buscar a caça. 
+Esse episódio rendeu ao caçador o apelido de "celfone hunter".
 
 
 ## Opção 1 - extensão por meio de cabo de rede
+
+A primeira opção cogitado para fazer a extensão da rede foi de usar cabo de rede para extender o acesso. 
 
 Essa opção basicamente trabalho na camada física e de enlace.
 Disponibilidades: o Roteador tem uma porta de saída RJ45 para cabo par transado 10base-T ou 100base-T.
@@ -66,6 +100,9 @@ Há algumas opções antigos de cabo de rede coaxial que permite maiores alcance
 | Rede      | TCP/IP (DHCP)     | TCP IP dinâmico| 
 | Enlace    | IEEE 802          | IEEE 802       |
 | Física    | Cano de redeR     | Cabo de rede   |  
+
+A grande disvantagem é o custo da instalação, pois o custo de cabo de rede é um torno de R\$0,70 o metro, além do custo do trabalho de enterrar o cabo.
+
 
 ## Opção 2 - uso de repetidores da sinal de WiFi
 
