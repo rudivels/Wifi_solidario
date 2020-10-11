@@ -99,7 +99,7 @@ Há algumas opções antigos de cabo de rede coaxial que permite maiores alcance
 | Aplicação | Serviços internet | Serviços internet (Whatsapp)|
 | Rede      | TCP/IP (DHCP)     | TCP IP dinâmico| 
 | Enlace    | IEEE 802          | IEEE 802       |
-| Física    | Cabo de redeR     | Cabo de rede   |  
+| Física    | Cabo de rede     | Cabo de rede   |  
 
 A grande disvantagem é o custo da instalação, pois o custo de cabo de rede é um torno de R\$0,70 o metro, além do custo do trabalho de enterrar o cabo.
 
