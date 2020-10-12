@@ -144,6 +144,27 @@ Essa solução pode ser representado pelas seguintes camadas Rede, Enlace e Fís
 
 ![](figuras/camadas_protocolos.png)
 
+# Avaliação do radio enlace 
+Uma das exigências do implementar o radio enlace é que entre a antenna de transmissão e da antenna de recepção há visibilidade direta sem obstáculos. 
+
+Uma maneira de avaliar isso é por meio do avaliação da topografia do terreno. 
+O uso de Sistemas de Informações Goegráficos (SIG) é uma ferramenta poderosa para fazer estes avaliações usando dados abertos e software de código fonte abertos. 
+
+O QGIS é um SIG bastante versátil com diversos plugins desenvolvido pela comunidade que sustenta o software. 
+Usamos o QGIS 3.10 e obtemos os dados topográficos do [http://opentopography.org](http://opentopography.org).
+Com estes dados elaborou se o mapa topográfico do sitio sobreposto com o estrada de acesso e a proposta do radio enlace.
+
+![](figuras/dem_topografia.jpeg)
+
+O QGIS tem ferramentas específicas levantar o profile do terreno (*Profile tool*) que dá uma visão detalhada do enlace e os obstáculos do terreno, conforme mostra na próxima figura.
+
+![](figuras/radio_enlace.png)
+
+Como pode ser observada na figura, o comprimento exato do enlace é de 650 metros e o desnível do entre o transmissor e receptor é de 3 metros. 
+Também deve se levar em consideração que no terreno temos um cerrado com diversos árvores que também podem atrapalhar o sinal de rádio. 
+
+Se colocar a antenna externa num poste de 4 metros de altura no lado do transmissor (h=710m) pode se garantir que o sinal passa por cima da copa dos arvóres. No lado do receptor, pode-se montar a antenna externa numa pequena torre de 7 metros.
+Convêm destacar que a precisão dos medidos é em função da precisão do mapa topográfico. O mapa usado é o Shuttle Radar Topography Mission (SRTM GL1) Global com pixels de 30m. 
 
 
 # Implementação
