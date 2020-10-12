@@ -109,12 +109,14 @@ Disponibilidades: o Roteador tem uma porta de saída RJ45 para cabo par transado
 Limitações: O cabo 10base-T permite uma extensão de 100 metros. 
 Há algumas opções antigos de cabo de rede coaxial que permite maiores alcances, entretanto é uma tecnologia obsoleto e o cabo de rede coaixal é muito caro, além de precisar uma conversor cabo UTP para cabo coaxial.
 
-| Camada    | Roteador          | Celular | 
-|:---------:|:-----------------:|:-------:|
-| Aplicação | Serviços internet | Serviços internet (Whatsapp)|
-| Rede      | TCP/IP (DHCP)     | TCP IP dinâmico| 
-| Enlace    | IEEE 802          | IEEE 802       |
-| Física    | Cabo de rede     | Cabo de rede   |  
+A figura a seguir mostra a representação de camadas e neste caso a alternativa somente atua na camada física.
+
+| Camada    | Roteador          |    |Computador | 
+|:---------:|:-----------------:|:--:|:--------:|
+| Aplicação | Serviços internet |    | Serviços internet|
+| Rede      | TCP/IP (DHCP)     |    | TCP IP dinâmico| 
+| Enlace    | IEEE 802          |    | IEEE 802       |
+| **Física**| cabo de rede | cabo de rede | cabo de rede| 
 
 A grande disvantagem é o custo da instalação, pois o custo de cabo de rede é um torno de R\$0,70 o metro, além do custo do trabalho de enterrar o cabo.
 
@@ -128,34 +130,33 @@ Como estes repetidores são desenhados para ambientes internos eles são projeto
 
 Poderia-se usar essa solução, mas um dos grandes impecilios é que serão necessários algumas repetidores para poder cubrir o trajeto de 800 metros. Além disso haverá a necessidade de alimentar estes repetidores no meio do caminho. Lembrando que o acesso a eletricidade é um das condições de contorno.
 
-Solução Enlace - Fisica
+A representação em camadas da solução é dado pela figura a seguir destacando a camada física e enlace que implementam a alternativa. 
 
 | Camada    | Roteador          | Repetidor | Repetidor | Celular | 
 |:---------:|:-----------------:|:---------:|:---------:|:--------|
 | Aplicação | Serviços internet | | | Serviços internet |
 | Rede      | TCP/IP (DHCP)     | | | TCP IP dinâmico| 
-| Enlace | IEEE 802      | IEEE 802 |IEEE 802  | IEEE 802 |
-| Física | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz |
+| **Enlace** | IEEE 802      | IEEE 802 |IEEE 802  | IEEE 802 |
+| **Física** | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz | Radio 2.4 GHz |
 
 Essa solução seria bastante interessante se tivesse a necessidade de ter pontos de acesso no meio do caminho de uma casa até a outra. No nosso caso, por enquanto isso não é necessária.
 
 ## 4.3. Uso de link de radio direcional e novo ponto de acesso
 
-A opção 3 foco no otimizar o uso do canal de rádio WiFi e expandir seu alcance com algumas técnicas interessantes. 
+A opção 3 foca em otimizar o uso do canal de rádio WiFi e expandir seu alcance com algumas técnicas interessantes. 
 Um levantamento bibliográfico mostrou que essa tecnologia já está sendo implemento em situações onde se precisa aumentar o alcance dos serviços de internet ou de intranet em áreas rurais ou a implementação de serviços comunitários de comunicação na zona rural.
 
 A grande vantagem de usar essa tecnologia para essas aplicações é que ele não precisa de licenças específicas das autoridades de telecomunicações e pode ser implementado por qualquer pessoa, não necessitando de empresas de telecomunicações ou telefonia. 
 
 Como ele usa o espectro de 2.4 GHz que já é liberado para estes fim, a tecnica consiste em melhor o alcance do radio enlace usando antennas direcionais em vez de antennas onmidirecional.
 
-Teoricamente o alcance que se pode ter com essa tecnologia seria de até 3km. Este limite é imposto pelo protocolo IEEE 802 de controle de acesso ao meio físico e verificação de erros. Acontece que ao mandar um pacote de dados na camada de enlace o transmissor do dados espera receber do receptor um pacoto de dados confirmando a recepção do pacote. Se o transmissor não recebe o pacote num determinado periode de tempo, ele entende que o pacato foi perdido no meio do caminho e o transmissor re-envia o pacote.
+Teoricamente o alcance que se pode ter com essa tecnologia seria de até 3km. Este limite é imposto pelo protocolo IEEE 802 que define o método de acesso ao meio físico e a verificação dos erros de transmissão. Acontece que, ao mandar um pacote de dados na camada de enlace o transmissor do dados espera receber do receptor um pacoto de dados confirmando a recepção do pacote, um *acknowlegde* ou ACK. Se o transmissor não recebe o pacote num determinado periode de tempo, ele entende que o pacato foi perdido no meio do caminho e o transmissor re-envia o pacote.
 A limitação consiste no tempo do pacote sair do transmissor até o receptor e o tempo de mandar a confirmação de recepção ACK pelo receptor. 
-Este tempo limita o alcance de 3 km. Entretanto há meios de aumentar este tempo no protocolo e assim aumentar o alcance do radio enlace. O recorde de distância de transmissão atualmente é de uma radio enlace de visibilidade de com essa tecnologia em Venezuela de 382 km  [2].
-
+Este tempo limita o alcance de 3 km. Entretanto há meios de aumentar este tempo no protocolo e assim aumentar o alcance do radio enlace. O recorde de distância de transmissão atualmente é de uma radio enlace de visibilidade de com essa tecnologia em Venezuela de 382 km [2].
 
 Há de diversos relatos do uso dessa tecnologia em aplicações comunitárias. 
 
-Essa solução pode ser representado pelas seguintes camadas Rede, Enlace e Física.
+A figura a seguir mostra a representação dessa implementação e destac-se que a solução usa a camada física, enlace de dados e a camada de rede.
 
 ![](figuras/camadas_protocolos.png)
 
